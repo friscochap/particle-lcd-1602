@@ -86,6 +86,21 @@ void setup() {
   delay(3000);
   lCD_1602.clear();
   
+  lCD_1602.writeLine("Clear",LCD_LINE_1);
+  lCD_1602.writeLine("Line",LCD_LINE_2);
+
+  delay(3000);
+
+  lCD_1602.lineClear(LCD_LINE_1);
+
+  delay(2000);
+
+  lCD_1602.lineClear(LCD_LINE_2);
+
+  delay(2000);
+
+  lCD_1602.clear();
+
   lCD_1602.writeLine("Demo",LCD_LINE_1);
   lCD_1602.writeLine("Complete",LCD_LINE_2);
 }

@@ -46,6 +46,19 @@ void LCD_1602::clear()
     writeCommand(DisplayClear);
 }
 
+void LCD_1602::lineClear(byte line) 
+{
+    write(line, LCD_CMD);
+    
+    for(int i = 0; i < 40; i++) {
+    {
+        write(' ', LCD_CHR);
+    }
+
+    delay(50);
+    }
+}
+
 void LCD_1602::cursorShow(bool blinkCursor)
 {
     byte cmdCode = (blinkCursor) ? 0x0F : 0x0E;

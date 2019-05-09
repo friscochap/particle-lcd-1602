@@ -43,6 +43,8 @@ public:
 
   void turnOff();
   void turnOn();
+
+  void lineClear(byte line);
   /**
    * Output routines
    **/
