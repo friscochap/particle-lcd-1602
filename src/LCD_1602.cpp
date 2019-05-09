@@ -5,7 +5,7 @@
 const byte DISPLAY_ON    = 0x0C;
 const byte DISPLAY_OFF   = 0x08;
 const byte DISPLAY_CLEAR = 0x01;
-
+const char* BLANK_LINE = "                                        ";
 /**
  * Constructor.
  */
@@ -48,15 +48,7 @@ void LCD_1602::clear()
 
 void LCD_1602::lineClear(byte line) 
 {
-    write(line, LCD_CMD);
-    
-    for(int i = 0; i < 40; i++) {
-    {
-        write(' ', LCD_CHR);
-    }
-
-    delay(50);
-    }
+    writeLine(BLANK_LINE, line);
 }
 
 void LCD_1602::cursorShow(bool blinkCursor)
