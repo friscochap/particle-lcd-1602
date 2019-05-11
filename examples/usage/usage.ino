@@ -13,7 +13,7 @@ void setup() {
   pinMode(D6, OUTPUT);
   pinMode(D7, OUTPUT);
 
-  lCD_1602.init(false);
+  lCD_1602.init();
 
   lCD_1602.writeLine("Library 0.0.3",LCD_LINE_1);
   lCD_1602.writeLine("Initialized",LCD_LINE_2);

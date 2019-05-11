@@ -15,17 +15,6 @@ LCD_1602::LCD_1602()
 
 void LCD_1602::init()
 {
-    init(false);
-}
-
-void LCD_1602::init(bool mode8Bit)
-{
-    if (false == mode8Bit)
-    {
-        write(0x33, LCD_CMD); // Set to 4-bit mode
-        write(0x32, LCD_CMD); // Set to 4-bit mode
-    }
-
     write(0x06, LCD_CMD); // Cursor move direction
     write(0x0C, LCD_CMD); // Turn cursor off
     write(0x28, LCD_CMD); // 2 line display

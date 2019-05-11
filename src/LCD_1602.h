@@ -32,7 +32,6 @@ public:
   LCD_1602();
 
   void init();
-  void init(bool mode8Bit);
 
   /**
    * Cursor Methods
