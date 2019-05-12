@@ -3,15 +3,10 @@
 #include "../../src/LCD_1602.h"
 
 // Initialize objects from the lib
-LCD_1602 lCD_1602;
+LCD_1602 lCD_1602(A0, A1, D4, D5, D6, D7);
 
 void setup() {
-  pinMode(LCD_RS, OUTPUT);
-  pinMode(LCD_E, OUTPUT);
-  pinMode(D4, OUTPUT);
-  pinMode(D5, OUTPUT);
-  pinMode(D6, OUTPUT);
-  pinMode(D7, OUTPUT);
+
 
   lCD_1602.init();
 

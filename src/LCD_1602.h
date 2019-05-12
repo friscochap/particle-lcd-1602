@@ -25,11 +25,12 @@ enum Command : byte {
 // This is your main class that users will import into their application
 class LCD_1602
 {
+  int m_RS, m_E, m_D4, m_D5, m_D6, m_D7;
 public:
   /**
    * Constructor
    */
-  LCD_1602();
+  LCD_1602(int rs, int e, int d4, int d5, int d6, int d7);
 
   void init();
 
